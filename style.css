@@ -132,7 +132,7 @@ h4, p{
 /* about sec  */
 
 .about-me-sec{
-    min-height: 50vh;
+    min-height: 70vh;
     background-color: var(--secondary-shade);
     color: var(--primary-color);
 }
@@ -183,7 +183,7 @@ h3{
 /* portfolio sec  */
 
 .portfolio-sec{
-    height: 60vh;
+    height: 70vh;
     background-color: darkgoldenrod;
 }
 
@@ -233,7 +233,7 @@ h3{
 
 .contact-us-sec{
     background-color: darkgoldenrod;
-    height: 40vh;
+    height: 70vh;
     padding: 1px;
 }
 
