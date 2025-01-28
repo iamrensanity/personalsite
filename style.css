@@ -323,7 +323,33 @@ footer p{
     top: 30px;
     right: 10px;
  }
+img {
+    max-width: 100%;
+    height: auto;
+}@media (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+}
 
+/* For screens larger than 768px (desktops) */
+@media (min-width: 769px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/* For screens larger than 768px (desktops) */
+@media (min-width: 769px) {
+    body {
+        background-color: lightgreen;
+    }
+}
 
     
 } */
