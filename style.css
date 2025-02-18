@@ -1,17 +1,231 @@
-/* Default styles for larger screens (desktop) */
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-header, section {
-    padding: 20px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Mobile-first approach (for smaller devices) */
+button {
+    cursor: pointer;
+}
+
+/* Global Layout Styles */
+.layout {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex2 {
+    flex: 2;
+}
+
+.flex3 {
+    flex: 3;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Header Section */
+header {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.hire-me-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.left h4 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.left h2 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.left p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.left button {
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.right .color-box {
+    background-color: #333;
+    width: 200px;
+    height: 200px;
+}
+
+/* About Section */
+.about-me-sec {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.about-sec h3 {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about-sec .about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-sec img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Portfolio Section */
+.portfolio-sec {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.portfolio h3 {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.portfolio-parent {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.portfolio-child {
+    width: 30%;
+    text-align: center;
+}
+
+.portfolio-child img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.portfolio-child h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Contact Section */
+.contact-us-sec {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.contact-us h3 {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-details div {
+    width: 30%;
+}
+
+.contact-details h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive Design */
 @media only screen and (max-width: 768px) {
     .nav-bar {
         flex-direction: column;
-        align-items: flex-start;
+        text-align: center;
     }
 
     .logo {
@@ -20,30 +234,17 @@ header, section {
 
     .nav-links ul {
         flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .nav-links ul li {
-        margin: 5px 0;
+        margin-bottom: 20px;
     }
 
     .content {
         flex-direction: column;
-    }
-
-    .left {
-        width: 100%;
-    }
-
-    .right {
-        width: 100%;
-        margin-top: 20px;
+        text-align: center;
     }
 
     .portfolio-parent {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
 
     .portfolio-child {
@@ -53,46 +254,23 @@ header, section {
 
     .contact-details {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    .contact-details .left-sec,
-    .contact-details .center-sec,
-    .contact-details .right-sec {
+    .contact-details div {
         width: 100%;
         margin-bottom: 20px;
     }
 }
 
-/* Tablet view */
 @media only screen and (max-width: 1024px) {
-    .nav-bar {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
     .portfolio-parent {
         flex-direction: row;
         justify-content: space-between;
     }
 
     .portfolio-child {
-        width: 30%;
+        width: 48%;
     }
 }
 
-/* Desktop view */
-@media only screen and (min-width: 1025px) {
-    .nav-bar {
-        flex-direction: row;
-    }
-
-    .portfolio-parent {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .portfolio-child {
-        width: 30%;
-    }
-}
